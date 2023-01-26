@@ -1,5 +1,4 @@
 import React , {useState} from 'react' 
-import "./styls.css" 
 import "./Style.css" 
  
 function ContactList() { 
