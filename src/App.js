@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import addContact from "./component/addContact";
 
 function App() {
   return (
