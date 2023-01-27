@@ -1,5 +1,5 @@
 import React , {useState} from 'react' 
-import "./Style.css" 
+import "./style.css" 
  
 function ContactList() { 
     const [contacts, setContacts] = useState([ 
