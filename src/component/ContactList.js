@@ -60,7 +60,7 @@ function ContactList() {
               City: 
               <input type="text" className='input_C' value={newCity} onChange={e => setNewCity(e.target.value)} /> 
             </label> 
-            <button className='button-29' type="submit">Add</button> 
+            <button className='button-29' type="submit" id='add'>Add</button> 
           </form> 
             <label> 
               Search:   
