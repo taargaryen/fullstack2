@@ -3,8 +3,7 @@ import "./style.css"
  
 function ContactList() { 
     const [contacts, setContacts] = useState([ 
-        { name: 'othmane', phone: '0654830056' , ville: "Kenitra"}, 
-        { name: 'abdellah', phone: '0654830057' , ville: "Tanger"} 
+        
       ]); 
      
       const [newName, setNewName] = useState(''); 
