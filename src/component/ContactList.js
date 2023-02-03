@@ -1,6 +1,6 @@
 import React , {useState} from 'react' 
-import "./style.css" 
- 
+
+
 function ContactList() { 
     const [contacts, setContacts] = useState([ 
         
@@ -48,38 +48,38 @@ function ContactList() {
         <div className='context'> 
           <h1 className='title'>Contacts</h1> 
           <form onSubmit={handleSubmit}> 
-            <label> 
-              Name: 
-              <input type="text" className='input_C' value={newName} onChange={e => setNewName(e.target.value)} /> 
-            </label> 
-            <label> 
-              Phone: 
-              <input type="text" className='input_C' value={newPhone} onChange={e => setNewPhone(e.target.value)} /> 
-            </label> 
-            <label> 
-              City: 
-              <input type="text" className='input_C' value={newCity} onChange={e => setNewCity(e.target.value)} /> 
-            </label> 
-            <button className='button-29' type="submit" id='add'>Add</button> 
+              <input type="text" className='input_C' value={newName} onChange={e => setNewName(e.target.value)} placeholder={"Name"}/> 
+
+              <input type="text" className='input_C' value={newPhone} onChange={e => setNewPhone(e.target.value)} placeholder={"phone number"}/> 
+
+              <input type="text" className='input_C' value={newCity} onChange={e => setNewCity(e.target.value)} placeholder={"city"}/> 
+
+            <button className='btn1' type="submit" id='add'>Add
+            <span></span><span></span><span></span><span></span>
+            </button> 
           </form> 
-            <label> 
-              Search:   
-            <input type="text" className='input_C' value={searchTerm} onChange={handleSearch} /> 
-            </label> 
-          <div className='sort-buttons'> 
-            <button className='button-31' onClick={() => handleSort('name')}>Sorted by name</button> 
-          </div> 
+          <div className='CL'>
           <h1 className='title'>Contact list</h1> 
-          <ul> 
+
+            <input type="text" className='input-search' value={searchTerm} onChange={handleSearch} placeholder={"Search"} /> 
+            <i id={"search-icon"} class="fa-solid fa-magnifying-glass"></i>
+
+            <button className='btn-sort' onClick={() => handleSort('name')}>Sorted
+            <span></span><span></span><span></span><span></span>
+            </button> 
+            </div>
+          <ul>
         {sortedContacts.map((contact, index) => ( 
           <li key={index}> 
-            <b>{contact.name}</b> - {contact.phone} - {contact.ville} 
-            <button className='button-30' onClick={() => handleDelete(index)}>Delete</button> 
-          </li> 
+            <b type="button" className='btn2'>{contact.name}</b> 
+            <p className='info1'>{contact.phone}</p>
+            <p className='info2'>{contact.ville}</p> 
+            <button className='btn-delete' onClick={() => handleDelete(index)}>Delete</button> 
+          </li>
         ))} 
       </ul> 
     </div> 
   ); 
 }; 
  
-export default ContactList;
+export default ContactList;
